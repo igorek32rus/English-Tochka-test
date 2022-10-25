@@ -1,0 +1,13 @@
+@media only screen and (max-width: 1220px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .balance {
+        width: auto;
+    }
+
+    .discount .discount__block {
+        justify-content: center;
+    }
+}

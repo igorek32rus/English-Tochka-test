@@ -1,0 +1,61 @@
+#modal {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#modal.show {
+    display: flex;
+}
+
+.modal__backdrop {
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+}
+
+.modal__window {
+    width: 470px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+}
+
+.modal__close {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    opacity: .5;
+    transition: opacity .2s ease-in-out;
+}
+
+.modal__close:hover {
+    opacity: 1;
+}
+
+.modal__header {
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.modal__content {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.modal__content p {
+    padding: 15px 0;
+}

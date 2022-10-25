@@ -1,0 +1,215 @@
+@import "reset.css";
+@import "fonts.css";
+
+body {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: 16px 'Museo Sans Cyrl', sans-serif;
+    color: #242424;
+}
+
+.wrapper {
+    background: #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 1280px;
+    margin-top: 30px;
+    padding: 57px 70px 93px 70px;
+}
+
+.balance {
+    width: 255px;
+    background: rgba(106, 106, 106, .08);
+    padding: 16px 38px;
+}
+
+.balance .balance__title {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.discount {
+    background: rgba(106, 106, 106, .08);
+    padding: 16px 29px;
+    display: flex;
+    flex-direction: column;
+}
+
+.discount .discount__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.discount .discount__header .discount__title {
+    font-weight: 600;
+    font-size: 22px;
+    margin-right: 15px;
+}
+
+.discount .discount__header .discount__instruction {
+    font-weight: 300;
+    font-size: 9px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.discount .discount__block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 7px;
+}
+
+.discount .discount__block .discount__item {
+    width: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 21px;
+}
+
+.money {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 11px;
+}
+
+.money::before {
+    content: '';
+    display: inline-block;
+    background-size: contain;
+}
+
+.money::after {
+    content: '';
+    display: inline-block;
+}
+
+.money.discount__price {
+    font-size: 18px;
+}
+
+.money.discount__price::before {
+    content: '';
+    background: url(../images/icons/coin.png) no-repeat;
+    background-size: contain;
+    margin-right: 3px;
+    width: 14px;
+    height: 14px;
+}
+
+.money.discount__price::after {
+    content: '';
+    background: url(../images/icons/et.svg) no-repeat;
+    background-size: contain;
+    margin-left: 3px;
+    width: 17px;
+    height: 14px;
+}
+
+.money.balance__money {
+    font-weight: 600;
+    font-size: 52px;
+    margin-top: 5px;
+}
+
+.money.balance__money::before {
+    content: '';
+    background: url(../images/icons/big_coin.png) no-repeat;
+    background-size: contain;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.money.balance__money::after {
+    content: '';
+    background: url(../images/icons/et.svg) no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    width: 50px;
+    height: 38px;
+}
+
+.discount .discount__icon {
+    width: 39px;
+    height: 39px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.discount__icon.phone {
+    background-image: url(../images/icons/phone.png);
+    position: relative;
+}
+
+.discount__icon.phone .count__calls {
+    position: absolute;
+    right: -5px;
+    top: 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.discount__icon.opened_book {
+    background-image: url(../images/icons/opened_book.png);
+}
+
+.discount__icon.books {
+    background-image: url(../images/icons/books.png);
+}
+
+.discount .discount__about {
+    display: flex;
+    margin: 14px 0;
+}
+
+.discount .discount__percent {
+    background: #FF1A1A;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    transform: rotate(-12.65deg);
+    padding: 2px 5px;
+}
+
+.discount .discount__text {
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 7px;
+}
+
+button.button {
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    padding: 5px 10px;
+    color: #242424;
+    transition: opacity .2s ease-in-out;
+}
+
+button.button:hover {
+    opacity: .8;
+}
+
+button.button:active {
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .4);
+}
+
+.discount button.discount__button {
+    width: 135px;
+    background: #FECE00;
+}
+
+.discount button.discount__button.discount__used {
+    background: #00CD52;
+    color: #fff;
+}
