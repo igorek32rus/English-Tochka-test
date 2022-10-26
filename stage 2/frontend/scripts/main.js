@@ -1,9 +1,16 @@
-const $modal = document.querySelector('#modal')
+import Modal from "./modal"
+import User from "./user"
 
-const handlerShowModal = (e) => {
-    $modal.classList.add('show')
-}
+window.modal = new Modal()      // создаём модалку
+const user = new User()         // и пользователя
 
-const handlerCloseModal = (e) => {
-    $modal.classList.remove('show')
-}
+// для работы кнопки "Инструкция"
+const $instruction = document.querySelector('.products__instruction')
+$instruction.addEventListener('click', () => {
+    modal.showModal('Инструкция', `
+        <p>После публикации сделайте скрин, что вы его написали и отправьте своему куратору, чтобы мы добавили вам спецкурс в личный кабинет.</p>
+        <p>После публикации сделайте скрин, что вы его написали и отправьте своему куратору, чтобы мы добавили вам спецкурс в личный кабинет.</p>
+        <p>После публикации сделайте скрин, что вы его написали и отправьте своему куратору, чтобы мы добавили вам спецкурс в личный кабинет.</p>
+        <p>После публикации сделайте скрин, что вы его написали и отправьте своему куратору, чтобы мы добавили вам спецкурс в личный кабинет.</p>
+    `)
+})

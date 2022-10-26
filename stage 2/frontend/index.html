@@ -5,79 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Tochka</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
     
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/media.css">
 
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="balance">
             <div class="balance__title">Ваш баланс:</div>
-            <div class="money balance__money">34</div>
+            <div class="money balance__money">0</div>
         </div>
-        <div class="discount">
-            <div class="discount__header">
-                <div class="discount__title">Варианты обмена на скидку</div>
-                <div class="discount__instruction" onclick="handlerShowModal()">Инструкция</div>
+        <div class="products">
+            <div class="products__header">
+                <div class="products__title">Варианты обмена на скидку</div>
+                <div class="products__instruction">Инструкция</div>
             </div>
-            <div class="discount__block">
-                <div class="discount__item">
-                    <div class="money discount__price">50</div>
-                    <div class="discount__icon phone">
-                        <div class="count__calls">x2</div>
-                    </div>
-                    <div class="discount__about">
-                        <div class="discount__percent">50%</div>
-                        <div class="discount__text">на звонки ST (x2)</div>
-                    </div>
-                    <button class="button discount__button discount__used">Уже использовано</button>
-                </div>
-                <div class="discount__item">
-                    <div class="money discount__price">70</div>
-                    <div class="discount__icon opened_book"></div>
-                    <div class="discount__about">
-                        <div class="discount__percent">30%</div>
-                        <div class="discount__text">на спецкурс</div>
-                    </div>
-                    <button class="button discount__button">Использовать скидку</button>
-                </div>
-                <div class="discount__item">
-                    <div class="money discount__price">100</div>
-                    <div class="discount__icon books"></div>
-                    <div class="discount__about">
-                        <div class="discount__percent">50%</div>
-                        <div class="discount__text">на курс</div>
-                    </div>
-                    <button class="button discount__button">Использовать скидку</button>
-                </div>
-                <div class="discount__item">
-                    <div class="money discount__price">139</div>
-                    <div class="discount__icon books"></div>
-                    <div class="discount__about">
-                        <div class="discount__percent">65%</div>
-                        <div class="discount__text">на курс</div>
-                    </div>
-                    <button class="button discount__button">Использовать скидку</button>
-                </div>
+            <div class="products__block">
+                
             </div>
         </div>
     </div>
 
-    <div id="modal">
-        <div class="modal__backdrop" onclick="handlerCloseModal()"></div>
-        <div class="modal__window">
-            <div class="modal__close" onclick="handlerCloseModal()">&times;</div>
-            <div class="modal__header">Инструкция</div>
-            <div class="modal__content">
-                <p>После публикации сделайте скрин, что вы его написали и отправьте своему куратору, чтобы мы добавили вам спецкурс в личный кабинет.</p>
-                <p>После публикации сделайте скрин, что вы его написали и отправьте своему куратору, чтобы мы добавили вам спецкурс в личный кабинет.</p>
-                <p>После публикации сделайте скрин, что вы его написали и отправьте своему куратору, чтобы мы добавили вам спецкурс в личный кабинет.</p>
-                <p>После публикации сделайте скрин, что вы его написали и отправьте своему куратору, чтобы мы добавили вам спецкурс в личный кабинет.</p>
-            </div>
-        </div>
+    <div class="wrapper auth">
+        <form id="authorization" onsubmit="return false;">
+            <input type="text" name="login" id="login">
+            <button class="button auth__button">Открыть пользователя</button>
+        </form>
+        <span class="message__auth"></span>
     </div>
+
+    <div id="modal"></div>
 </body>
 </html>

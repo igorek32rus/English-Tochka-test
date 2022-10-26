@@ -1,6 +1,7 @@
 @media only screen and (max-width: 1220px) {
     .wrapper {
         flex-direction: column;
+        width: auto;
     }
 
     .balance {
@@ -9,5 +10,20 @@
 
     .discount .discount__block {
         justify-content: center;
+    }
+
+    .products .products__block {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #authorization {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    button.auth__button {
+        margin: 10px 0;
     }
 }
